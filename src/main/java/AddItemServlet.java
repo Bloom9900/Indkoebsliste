@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-@WebServlet(name = "AddItemServlet", urlPatterns = {"/AddItemServlet"} )
+@WebServlet(name = "AddItemServlet", urlPatterns = {"/AddItemServlet"})
 public class AddItemServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -17,7 +17,7 @@ public class AddItemServlet extends HttpServlet {
         String varenavn = request.getParameter("vareNavn");
 
 
-        if ( ((Set<String>) session.getAttribute("basket"))== null ) {
+        if (((Set<String>) session.getAttribute("basket")) == null) {
 
             Set<String> basket = new HashSet<>();
 
@@ -25,12 +25,11 @@ public class AddItemServlet extends HttpServlet {
 
         }
 
-        ( (Set<String>) session.getAttribute("basket") ).add(varenavn);
+        ((Set<String>) session.getAttribute("basket")).add(varenavn);
 
-        request.setAttribute("besked", "Her kan du se en oversigt over dine valgt vare");
+        request.setAttribute("besked", "Her er en oversigt over dine vare:");
 
-        request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request,response);
-
+        request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request, response);
 
 
     }

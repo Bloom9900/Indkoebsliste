@@ -1,0 +1,71 @@
+[33mcommit fe191a7130cbf599f32bc824a286c0f879202762[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Sat Feb 22 08:21:56 2020 +0100
+
+    så fik vi vist ordet alt ift brugerhåndtering
+
+[33mcommit 6fa904c025977d0623ac7176d63dc711985bac1e[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Fri Feb 21 12:28:40 2020 +0100
+
+    fixet problem med loggin mens session lever
+
+[33mcommit ae2f614a5b159a7d10b33cedb1648b5ddbfbafc2[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Fri Feb 21 12:03:01 2020 +0100
+
+    nu med basket
+
+[33mcommit c8e92ec9dbbddc64ecb811a80a89c7992b0dd9ff[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Fri Feb 21 09:58:37 2020 +0100
+
+    har tilføjet sessions og har tildels faprøvet det
+
+[33mcommit 76160e623d37313fb389e8c4283085c0581175c1[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Fri Feb 21 08:49:40 2020 +0100
+
+    har ændret det fra en huskeliste til en webshop
+
+[33mcommit ca84ab4a71cb6049b028d2368143978e79c557e2[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 12:56:56 2020 +0100
+
+    nu kan jeg slette brugere og det er delvist afprøvet
+
+[33mcommit b9d5081ab2f0dbf2e2a872e7fc75ca787ceb241f[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 12:08:41 2020 +0100
+
+    nu med admin side hvor man kan se alle brugere
+
+[33mcommit 45da59b2e0ceeb23f2008df9c4ba5be9919b2ded[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 11:53:51 2020 +0100
+
+    har rettet i forms og tilføjet tekst på huskeliste siden
+
+[33mcommit 8f933cdb25b7b9dc31f4030a6442b0ce99e590c8[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 11:32:32 2020 +0100
+
+    nu kan vi oprette en bruger - tror jeg nok
+
+[33mcommit f105ed86e1f0dbb558fafb723fa972cd5d00456e[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 11:12:21 2020 +0100
+
+    login er sgu nok ved at være ok
+
+[33mcommit fae1c9ca454f3b0a4842768ed197e92f6a357d63[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 09:31:08 2020 +0100
+
+    har oprettet logIn servletten
+
+[33mcommit 226c6b7911cb619a15fa6beaf84466484bcac565[m
+Author: Nikolaj B Hemmeshøj <nbh@cphbusiness.dk>
+Date:   Thu Feb 20 09:17:03 2020 +0100
+
+    starte på det hele

@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>webshop</title>
+    <title>Webshop</title>
 </head>
 <body>
 
-<h1> velkommen til din webshop</h1>
+<h1>Velkommen til webshoppen</h1>
 
 <br>
 <br>
@@ -30,8 +30,6 @@ ${requestScope.besked}
     <input type="text" id="lname" name="kodeord"><br><br>
     <input type="submit" value="login">
 </form>
-
-
 
 </body>
 </html>

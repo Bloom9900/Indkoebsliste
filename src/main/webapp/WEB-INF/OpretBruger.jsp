@@ -12,7 +12,7 @@
 </head>
 <body>
 
-Her skal du registrere dig inden på kan lave indkøb i min webshop.
+<h1>Her skal du registrere dig som bruger.</h1>
 
 <br>
 <br>
@@ -21,18 +21,13 @@ ${requestScope.besked}
 <br>
 <br>
 
-
 <form action="OpretServlet" method="post">
-    <label for="fname">First name:</label><br>
+    <label for="fname">Brugernavn: </label><br>
     <input type="text" id="fname" name="navn"><br>
     <label for="lname">Kodeord: </label><br>
     <input type="text" id="lname" name="kodeord"><br><br>
     <input type="submit" value="Opret">
 </form>
-
-
-
-
 
 </body>
 </html>

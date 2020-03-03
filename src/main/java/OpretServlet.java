@@ -19,14 +19,14 @@ public class OpretServlet extends HttpServlet {
 
         if( ( (Map<String,String>) servletContext.getAttribute("brugerMap") ).containsKey(navn)   ) {
 
-            request.setAttribute("besked", "navnet du angav er allerede brugt !");
+            request.setAttribute("besked", "Brugernavnet er allerede i brug.");
             request.getRequestDispatcher("WEB-INF/OpretBruger.jsp").forward(request,response);
 
         }
 
         ( (Map<String,String>) servletContext.getAttribute("brugerMap") ).put(navn,kodeord);
 
-        request.setAttribute("besked", "du er oprettet og er klar til at logge in");
+        request.setAttribute("besked", "Din bruger er oprettet. Velkommen til siden");
         request.getRequestDispatcher("index.jsp").forward(request,response);
 
 

@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Set;
 
 @WebServlet(name = "LogInServlet", urlPatterns = {"/LogInServlet"})
-public class LogInServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ServletContext servletContext = getServletContext();
@@ -28,26 +28,24 @@ public class LogInServlet extends HttpServlet {
 
             Map<String, String> brugerMap = new HashMap<>();
 
-            brugerMap.put("test","test");
-            brugerMap.put("admin","1234");
+            brugerMap.put("test", "test");
+            brugerMap.put("admin", "1234");
 
             servletContext.setAttribute("brugerMap", brugerMap);
 
         }
 
-        if(  (  (Set<String>) servletContext.getAttribute("aktiveBrugere"))== null ) {
+        if (((Set<String>) servletContext.getAttribute("aktiveBrugere")) == null) {
 
             Set<String> aktiveBrugere = new HashSet<>();
-            servletContext.setAttribute("aktiveBrugere",aktiveBrugere);
+            servletContext.setAttribute("aktiveBrugere", aktiveBrugere);
 
         }
 
 
+        if (!(session.getAttribute("besked") == null)) {
 
-
-        if(  ! (session.getAttribute("besked") == null) ) {
-
-            request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request,response);
+            request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request, response);
 
         }
 
@@ -56,7 +54,7 @@ public class LogInServlet extends HttpServlet {
 
 
             request.setAttribute("besked", "Opret dig som bruger");
-            request.getRequestDispatcher("WEB-INF/OpretBruger.jsp").forward(request,response);
+            request.getRequestDispatcher("WEB-INF/OpretBruger.jsp").forward(request, response);
 
 
         }
@@ -65,31 +63,30 @@ public class LogInServlet extends HttpServlet {
         if (((Map<String, String>) servletContext.getAttribute("brugerMap")).get(navn).equalsIgnoreCase(kodeord)) {
 
 
-            if(navn.equalsIgnoreCase("admin")) {
+            if (navn.equalsIgnoreCase("admin")) {
 
-               request.getRequestDispatcher("WEB-INF/admin.jsp").forward(request,response);
+                request.getRequestDispatcher("WEB-INF/admin.jsp").forward(request, response);
             }
 
-            if( ! ((Set<String>) servletContext.getAttribute("aktiveBrugere")).contains(navn) ) {
+            if (!((Set<String>) servletContext.getAttribute("aktiveBrugere")).contains(navn)) {
 
                 ((Set<String>) servletContext.getAttribute("aktiveBrugere")).add(navn);
 
-            session.setAttribute("besked" , "du er logget ind med navnet " + navn);
-            session.setAttribute("navn" ,  navn);
+                session.setAttribute("besked", "du er logget ind med navnet " + navn);
+                session.setAttribute("navn", navn);
 
-            request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request,response);
+                request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request, response);
 
 
             }
 
 
         }
-    // todo gå til ligind dvs. index siden.
+        // todo gå til ligind dvs. index siden.
 
         request.setAttribute("besked", "Der gik et eller andet galt, prøv igen");
-        request.getRequestDispatcher("index.jsp").forward(request,response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
-
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
